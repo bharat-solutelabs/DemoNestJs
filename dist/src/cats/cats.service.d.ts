@@ -8,7 +8,7 @@ export declare class CatsService {
     private readonly catRepository;
     private readonly breedRepository;
     private readonly connection;
-    constructor(catRepository: Repository<cat>, breedRepository: Repository<breed>, connection: Connection);
+    constructor(catRepository: Repository<cat>, breedRepository: Repository<breed>, connection: Connection, catType: string[]);
     findAll(paginationQuery: PaginationQueryDto): Promise<cat[]>;
     findOne(id: string): Promise<cat>;
     create(creatCatDto: CreateCatsDto): Promise<cat>;

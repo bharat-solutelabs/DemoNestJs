@@ -3246,9 +3246,14 @@
         "signature": "1ad86e19be4f4a168aed3e48f3e3b60965f9e6b39320ce00698058a0fd0ce411",
         "affectsGlobalScope": false
       },
+      "../src/cats/cats.constant.ts": {
+        "version": "fadca66e86712f7d844afd1c55e87398dd302467632dbf2692d1bca11c580fef",
+        "signature": "80704313f841884763ce6a1b396f39bb817dde223c8c123d0cdc9414b2b29fe8",
+        "affectsGlobalScope": false
+      },
       "../src/cats/cats.service.ts": {
-        "version": "d4d2d54ba90935d2670ee02f8edd6e144a502daa48b09cb128598e799b4850b0",
-        "signature": "5d5e298baa845a4fdc5ad3a7dd6fdd4915c765bc1a1fd37eca572b2ec187d427",
+        "version": "12488aca20fb799229f79ed60e3fa90a384201a6e06fec60f0c8be7812c5cb83",
+        "signature": "5ebbd5ca492a96ad4371c9029224a953fbe8aa1321d6eeca2b9f768977a7d880",
         "affectsGlobalScope": false
       },
       "../src/cats/cats.controller.ts": {
@@ -3257,7 +3262,7 @@
         "affectsGlobalScope": false
       },
       "../src/cats/cats.module.ts": {
-        "version": "9c6550e4a652ab2f353123091294eb98176fb965e38a4382c5de45c4806f6025",
+        "version": "94f41dd8a680af375b46ffb31fd1937f39483452a96ce383032839b95448e816",
         "signature": "001ce82f90be19e87938252e81da5e83a3f2d17b54ae3c6df65ee949fabaa6ea",
         "affectsGlobalScope": false
       },
@@ -6993,6 +6998,7 @@
       "../src/cats/cats.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/cats/cats.constant.ts",
         "../src/cats/cats.controller.ts",
         "../src/cats/cats.service.ts",
         "../src/cats/entities/breed.entity.ts",
@@ -7003,6 +7009,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/cats/cats.constant.ts",
         "../src/cats/dto/create-cats.dto.ts",
         "../src/cats/dto/update-cats.dto.ts",
         "../src/cats/entities/breed.entity.ts",
@@ -10801,6 +10808,7 @@
       "../src/app.service.ts",
       "../src/cat-rating/cat-rating.module.ts",
       "../src/cat-rating/cat-rating.service.ts",
+      "../src/cats/cats.constant.ts",
       "../src/cats/cats.controller.ts",
       "../src/cats/cats.module.ts",
       "../src/cats/cats.service.ts",

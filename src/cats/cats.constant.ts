@@ -1,0 +1,1 @@
+export const Cat_Type = "Cat_Type";

@@ -14,13 +14,16 @@ const typeorm_1 = require("@nestjs/typeorm");
 const cat_entity_1 = require("./entities/cat.entity");
 const breed_entity_1 = require("./entities/breed.entity");
 const event_entity_1 = require("../event/entities/event.entity");
+const cats_constant_1 = require("./cats.constant");
+class mockservice {
+}
 let CatsModule = class CatsModule {
 };
 CatsModule = __decorate([
     common_1.Module({
         imports: [typeorm_1.TypeOrmModule.forFeature([cat_entity_1.cat, breed_entity_1.breed, event_entity_1.Event])],
         controllers: [cats_controller_1.CatsController],
-        providers: [cats_service_1.CatsService],
+        providers: [cats_service_1.CatsService, { provide: cats_constant_1.Cat_Type, useValue: ['abc', 'xyz'] }],
         exports: [cats_service_1.CatsService]
     })
 ], CatsModule);

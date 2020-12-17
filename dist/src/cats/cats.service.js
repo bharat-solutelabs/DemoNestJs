@@ -20,11 +20,13 @@ const typeorm_2 = require("typeorm");
 const breed_entity_1 = require("./entities/breed.entity");
 const pagination_query_dto_1 = require("../common/dto/pagination-query.dto");
 const event_entity_1 = require("../event/entities/event.entity");
+const cats_constant_1 = require("./cats.constant");
 let CatsService = class CatsService {
-    constructor(catRepository, breedRepository, connection) {
+    constructor(catRepository, breedRepository, connection, catType) {
         this.catRepository = catRepository;
         this.breedRepository = breedRepository;
         this.connection = connection;
+        console.log(catType);
     }
     findAll(paginationQuery) {
         const { limit, offset } = paginationQuery;
@@ -93,9 +95,10 @@ CatsService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(cat_entity_1.cat)),
     __param(1, typeorm_1.InjectRepository(breed_entity_1.breed)),
+    __param(3, common_1.Inject(cats_constant_1.Cat_Type)),
     __metadata("design:paramtypes", [typeorm_2.Repository,
         typeorm_2.Repository,
-        typeorm_2.Connection])
+        typeorm_2.Connection, Array])
 ], CatsService);
 exports.CatsService = CatsService;
 //# sourceMappingURL=cats.service.js.map

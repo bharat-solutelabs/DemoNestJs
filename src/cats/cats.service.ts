@@ -1,4 +1,4 @@
-import { Injectable, HttpException, HttpStatus, NotFoundException } from '@nestjs/common';
+import { Injectable, HttpException, HttpStatus, NotFoundException, Inject } from '@nestjs/common';
 import { cat } from './entities/cat.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Connection } from 'typeorm';
@@ -7,6 +7,7 @@ import { UpdateCatsDto } from './dto/update-cats.dto';
 import { breed } from './entities/breed.entity';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 import { Event } from '../event/entities/event.entity'
+import { Cat_Type } from './cats.constant';
 @Injectable()
 export class CatsService {
     constructor(
@@ -14,8 +15,11 @@ export class CatsService {
       private readonly catRepository : Repository<cat>,
       @InjectRepository(breed)
       private readonly breedRepository : Repository<breed>,
-      private readonly connection : Connection
-    ) {}
+      private readonly connection : Connection,
+      @Inject(Cat_Type) catType : string[]
+    ) {
+      console.log(catType)
+    }
 
     findAll(paginationQuery : PaginationQueryDto) {
       const { limit, offset } = paginationQuery;
